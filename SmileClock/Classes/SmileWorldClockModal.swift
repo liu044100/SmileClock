@@ -8,15 +8,15 @@
 
 import UIKit
 
-@objc public protocol WorldClockModelDelegate {
+@objc public protocol SmileWorldClockModelDelegate {
     func timeZonesInModelHaveChanged()
     func secondHasPassed()
 }
 
-public class SmileWorldClockModal: NSObject, NSCoding {
+public class SmileWorldClockModel: NSObject, NSCoding {
     //MARK: ==
     public override func isEqual(object: AnyObject?) -> Bool {
-        if let rhs = object as? SmileWorldClockModal {
+        if let rhs = object as? SmileWorldClockModel {
             return selectedTimeZones == rhs.selectedTimeZones
         }
         return false
@@ -25,14 +25,14 @@ public class SmileWorldClockModal: NSObject, NSCoding {
     //MARK: Property
     var timer: NSTimer?
     public var selectedTimeZones = [SmileTimeZoneData]()
-    var delegate: WorldClockModelDelegate!
+    var delegate: SmileWorldClockModelDelegate!
     
     //MARK: Init
     public override init() {
         
     }
     
-    public convenience init(theDelegate: WorldClockModelDelegate) {
+    public convenience init(theDelegate: SmileWorldClockModelDelegate) {
         self.init()
         self.delegate = theDelegate
     }
@@ -50,7 +50,7 @@ public class SmileWorldClockModal: NSObject, NSCoding {
     }
     
     //MARK: Timer
-    public func startTimerWithDelegate(theDelegate: WorldClockModelDelegate) {
+    public func startTimerWithDelegate(theDelegate: SmileWorldClockModelDelegate) {
         delegate = theDelegate
         if selectedTimeZones.count > 0 {
             startTimer()

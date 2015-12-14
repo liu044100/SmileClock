@@ -11,14 +11,14 @@ import SmileClock
 
 let reuseIdentifier = "clockCell"
 
-class ClockCollectionVC: UICollectionViewController, WorldClockModelDelegate {
+class ClockCollectionVC: UICollectionViewController, SmileWorldClockModelDelegate {
     
-    var worldClockModal: SmileWorldClockModal!
+    var worldClockModal: SmileWorldClockModel!
     var dataFilePath: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        worldClockModal = SmileWorldClockModal(theDelegate: self)
+        worldClockModal = SmileWorldClockModel(theDelegate: self)
         loadDefaultClockData()
         self.collectionView?.collectionViewLayout = ClockLayout()
     }
