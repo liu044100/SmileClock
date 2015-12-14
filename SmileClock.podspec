@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "A library for make Clock UI simple."
   s.description  = <<-DESC
                    1. Live rendering in Storyboard.
-                   2. Using image to customize Clock UI.
+                   2. Support customize Clock UI.
                    3. Data model easy to use.
                    DESC
 
