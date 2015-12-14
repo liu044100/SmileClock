@@ -17,13 +17,24 @@ A library for make Clock UI simple.
 **Step1.** Drag a view in storyboard, and set the class to `SmileClockContainerView.h`.
 <img src="SmileClock-Example/demo_gif/demo_1.png" width="500">
 
-**Step2.** Click the attributes inspector, and set the color & clock style you like.
+**Step2.** Click the attributes inspector, and set the color & clock style you prefer.
 <img src="SmileClock-Example/demo_gif/demo.gif" width="500">
 
-#### 2. Use image to customize Clock UI.
+#### 2. Support customize Clock UI.
+Slice your clock design source to five parts: background image, center circle image, hour hand image, minute hand image, second hand image.
 
+<img src="SmileClock-Example/demo_gif/demo_2.jpg" width="500">
+``` swift
+let clockContainerView: SmileClockContainerView = ...
+clockContainerView.bgImage = UIImage(named: "bg")
+clockContainerView.centerImage = UIImage(named: "center")
+clockContainerView.hourHandImage = UIImage(named: "hour_hand")
+clockContainerView.minHandImage = UIImage(named: "min_hand")
+clockContainerView.secHandImage = UIImage(named: "sec_hand")
+``` 
+<img src="SmileClock-Example/demo_gif/demo_3.jpg" width="500">
 #### 3. Data model easy to use.
-
+<img src="SmileClock-Example/demo_gif/demo_4.jpg" width="700">
 
 # Contributions
 
