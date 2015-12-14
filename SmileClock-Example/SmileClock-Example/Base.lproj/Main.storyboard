@@ -141,7 +141,20 @@
                             <outlet property="delegate" destination="Y7B-wV-3tV" id="CMR-Gj-PMC"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Smile Clock" id="rhB-os-xNQ"/>
+                    <navigationItem key="navigationItem" title="Smile Clock" id="rhB-os-xNQ">
+                        <barButtonItem key="leftBarButtonItem" id="Eok-ve-Fpz">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="q2Z-0W-XlJ">
+                                <rect key="frame" x="20" y="6" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchCutomizedUI:" destination="Y7B-wV-3tV" eventType="valueChanged" id="Rxh-DZ-K3e"/>
+                                </connections>
+                            </switch>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="customizedUI_switch" destination="q2Z-0W-XlJ" id="upf-i3-moG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkK-Tm-N8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

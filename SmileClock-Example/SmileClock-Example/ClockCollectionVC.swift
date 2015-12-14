@@ -61,8 +61,52 @@ class ClockCollectionVC: UICollectionViewController, WorldClockModelDelegate {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ClockCollectionCell
         //Modal
         let currentTimeData = worldClockModal.selectedTimeZones[indexPath.row]
+        
         // Configure the cell
-        if currentTimeData.dayTime {
+        cell.clockContainerView.second = currentTimeData.second
+        cell.clockContainerView.minute = currentTimeData.minute
+        cell.clockContainerView.hour = currentTimeData.hour
+        
+        //test Customize UI
+        if customizedUI_switch.on {
+            showCustomizedUI(cell, dayTime: currentTimeData.dayTime)
+        } else {
+            removeCustomizedUI(cell, dayTime: currentTimeData.dayTime)
+        }
+        
+        cell.clockContainerView.updateClockView()
+        cell.countryNameLabel.text = currentTimeData.city
+        cell.currentTimeLabel.text = currentTimeData.hourMinuteString
+        
+        return cell
+    }
+    
+    
+    @IBOutlet weak var customizedUI_switch: UISwitch!
+    @IBAction func switchCutomizedUI(sender: UISwitch) {
+    }
+    
+    // MARK: CustomizeUI
+    func showCustomizedUI(cell: ClockCollectionCell, dayTime: Bool) {
+        if dayTime {
+            cell.clockContainerView.bgImage = UIImage(named: "bg")
+        } else {
+            cell.clockContainerView.bgImage = UIImage(named: "bg_night")
+        }
+        cell.clockContainerView.secHandImage = UIImage(named: "sec_hand")
+        cell.clockContainerView.minHandImage = UIImage(named: "min_hand")
+        cell.clockContainerView.hourHandImage = UIImage(named: "hour_hand")
+        cell.clockContainerView.centerImage = UIImage(named: "center")
+    }
+    
+    func removeCustomizedUI(cell: ClockCollectionCell, dayTime: Bool) {
+        cell.clockContainerView.bgImage = nil
+        cell.clockContainerView.secHandImage = nil
+        cell.clockContainerView.minHandImage = nil
+        cell.clockContainerView.hourHandImage = nil
+        cell.clockContainerView.centerImage = nil
+        
+        if dayTime {
             cell.clockContainerView.bgColor = UIColor.groupTableViewBackgroundColor()
             cell.clockContainerView.handColor = UIColor.blackColor()
             cell.clockContainerView.fontColor = UIColor.blackColor()
@@ -73,39 +117,6 @@ class ClockCollectionVC: UICollectionViewController, WorldClockModelDelegate {
             cell.clockContainerView.fontColor = UIColor.whiteColor()
             cell.clockContainerView.graduationColor = UIColor.whiteColor()
         }
-        cell.clockContainerView.second = currentTimeData.second
-        cell.clockContainerView.minute = currentTimeData.minute
-        cell.clockContainerView.hour = currentTimeData.hour
-        
-        //test Customize UI
-        if indexPath.row == 0 {
-            testCustomizeUI(cell)
-        } else {
-            clearCustomizeUI(cell)
-        }
-        
-        cell.clockContainerView.updateClockView()
-        cell.countryNameLabel.text = currentTimeData.city
-        cell.currentTimeLabel.text = currentTimeData.hourMinuteString
-        
-        return cell
-    }
-    
-    // MARK: CustomizeUI
-    func testCustomizeUI(cell: ClockCollectionCell) {
-        cell.clockContainerView.bgImage = UIImage(named: "bg")
-        cell.clockContainerView.secHandImage = UIImage(named: "sec_hand")
-        cell.clockContainerView.minHandImage = UIImage(named: "min_hand")
-        cell.clockContainerView.hourHandImage = UIImage(named: "hour_hand")
-        cell.clockContainerView.centerImage = UIImage(named: "center")
-    }
-    
-    func clearCustomizeUI(cell: ClockCollectionCell) {
-        cell.clockContainerView.bgImage = nil
-        cell.clockContainerView.secHandImage = nil
-        cell.clockContainerView.minHandImage = nil
-        cell.clockContainerView.hourHandImage = nil
-        cell.clockContainerView.centerImage = nil
     }
 
     // MARK: Memory
