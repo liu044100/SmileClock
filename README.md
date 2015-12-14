@@ -12,13 +12,17 @@ A library for make Clock UI simple.
 #What can it do for you?
 
 
-##### 1. Live rendering in Storyboard.
+#### 1. Live rendering in Storyboard.
 
+**Step1.** Drag a view in storyboard, and set the class to `SmileClockContainerView.h`.
+<img src="SmileClock-Example/demo_gif/demo_1.png" width="500">
+
+**Step2.** Click the attributes inspector, and set the color & clock style you like.
 <img src="SmileClock-Example/demo_gif/demo.gif" width="500">
 
-##### 2. Using image to customize Clock UI.
+#### 2. Use image to customize Clock UI.
 
-##### 3. Data model easy to use.
+#### 3. Data model easy to use.
 
 
 # Contributions
