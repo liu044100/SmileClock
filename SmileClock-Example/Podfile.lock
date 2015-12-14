@@ -1,0 +1,14 @@
+PODS:
+  - SmileClock (0.0.1)
+
+DEPENDENCIES:
+  - SmileClock (from `../`)
+
+EXTERNAL SOURCES:
+  SmileClock:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SmileClock: 0a93c77c7b5a9d215826ead58c92e2fde0337bb8
+
+COCOAPODS: 0.39.0

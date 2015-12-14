@@ -1,0 +1,13 @@
+platform :ios, '8.0'
+
+target 'Smile Clock' do
+
+pod 'SmileClock', :path => "../"
+
+#pod 'SmileClock'
+
+use_frameworks!
+
+end
+
+

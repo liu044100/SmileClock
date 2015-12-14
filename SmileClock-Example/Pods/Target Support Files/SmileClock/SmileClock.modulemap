@@ -1,0 +1,6 @@
+framework module SmileClock {
+  umbrella header "SmileClock-umbrella.h"
+
+  export *
+  module * { export * }
+}
