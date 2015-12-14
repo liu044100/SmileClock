@@ -7,7 +7,7 @@
 
 A library for make Clock UI simple.
 
-<img src="SmileClock-Example/demo_gif/pro_banner.jpg" width="700">
+<img src="SmileClock-Example/demo_gif/pro_banner.jpg" width="600">
 
 #What can it do for you?
 
