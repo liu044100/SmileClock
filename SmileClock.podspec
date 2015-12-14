@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => "https://github.com/liu044100/SmileClock.git", :tag => s.version.to_s}
   s.source_files  = 'SmileClock/Classes/*'
-  s.public_header_files = 'SmileClock/Classes/*.h'
+  s.public_header_files = 'SmileClock/Classes/*'
   s.frameworks = 'UIKit'
 
 end
