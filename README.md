@@ -34,7 +34,7 @@ clockContainerView.secHandImage = UIImage(named: "sec_hand")
 ``` 
 <img src="SmileClock-Example/demo_gif/demo_3.jpg" width="500">
 #### 3. Data model easy to use.
-Please check the example demo for more detail.
+Please check the [example project](https://github.com/liu044100/SmileClock/tree/master/SmileClock-Example) for more detail.
 <img src="SmileClock-Example/demo_gif/demo_4.jpg" width="700">
 
 # Contributions
