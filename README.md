@@ -37,6 +37,17 @@ clockContainerView.secHandImage = UIImage(named: "sec_hand")
 Please check the [example project](https://github.com/liu044100/SmileClock/tree/master/SmileClock-Example) for more detail.
 <img src="SmileClock-Example/demo_gif/demo_4.jpg" width="700">
 
+#How to use it for your project?
+
+SmileClock is available through use [CocoaPods](http://cocoapods.org). 
+
+To install it, simply add the following line to your Podfile:
+
+```Ruby
+pod 'SmileClock'
+```
+Or you can drag the [SmileClock](https://github.com/liu044100/SmileClock/tree/master/SmileClock/Classes) folder to your project.
+
 # Contributions
 
 * Warmly welcome to submit a pull request.
